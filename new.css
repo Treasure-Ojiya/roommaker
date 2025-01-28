@@ -301,7 +301,7 @@ ul {
     top: 3%;
     left: 0;
     width: 30%;
-    height: 50%;
+    height: 50vh;
     background-color: hsl(0, 0%, 27%);
     text-align: center;
     transform: translate(0, -5px), scale(1);
