@@ -259,8 +259,8 @@ ul {
     cursor: pointer;
     z-index: 10;
     position: absolute;
-    top: 2rem;
-    left: 1rem;
+    top: 0.7rem;
+    left: 0.5rem;
   }
 
   .hamburger-icon,
@@ -272,10 +272,10 @@ ul {
   /* Mobile Menu */
   .mobile-menu {
     position: absolute;
-    top: 10%;
+    top: 3%;
     left: 0;
-    width: 25%;
-    height: 50vh;
+    width: 30%;
+    height: 30vh;
     background-color: hsl(0, 0%, 27%);
     text-align: center;
     transform: translate(0, -5px), scale(1);
@@ -289,7 +289,7 @@ ul {
 
   .mobile-menu ul {
     list-style: none;
-    padding: 30px;
+    padding: 2px;
   }
 
   .menu-links li {
@@ -354,19 +354,33 @@ ul {
     font-weight: 500;
   }
 
-  .btn-shop {
+  .btn {
     font-size: 11px;
     font-weight: 600;
     text-decoration: none;
-    letter-spacing: 7px;
+    letter-spacing: 8px;
     cursor: pointer;
   }
 
+  .btn a:hover {
+    transform: translate(0, 5px);
+    color: hsl(0, 0%, 63%);
+  }
+  .btn a:active {
+    color: hsl(0, 0%, 0%);
+  }
+  .btn a:visited {
+    color: hsl(0, 0%, 0%);
+  }
+  .btn a:focus {
+    color: hsl(0, 0%, 0%);
+  }
+
   .btn-left-right {
-    position: fixed;
+    position: absolute;
     width: 9%;
-    top: 70%;
-    left: 81.6%;
+    top: 68%;
+    left: 68%;
   }
 
   .arrows {
