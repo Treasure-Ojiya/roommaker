@@ -1,0 +1,401 @@
+@import url("https://fonts.google.com/specimen/League+Spartan");
+
+body {
+  font-family: "League Spartan", sans-serif;
+  height: 100vh;
+}
+
+/* NAV BAR DESKTOP */
+#mobile-nav {
+  display: none;
+}
+
+.menu-container {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  align-items: start;
+  justify-items: flex-start;
+  gap: 5rem;
+  z-index: 10;
+}
+
+ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: hsl(0, 0%, 27%);
+  text-decoration: underline;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* Adjust distance below the text */
+  width: 0;
+  height: 5px;
+  transition: all 0.3s ease-in-out; /* Smooth underline animation */
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Full width underline on hover */
+}
+
+.section-1 {
+  position: relative;
+}
+
+.sl-row {
+  display: flex;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  transform: translate(0, 0), scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.sl-column {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.hidden {
+  display: none;
+  transform: translate(0, -5px), scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-img {
+  /* display: block; */
+  width: 100%;
+}
+.hero-img img {
+  width: 800px;
+  height: 500px;
+}
+
+.desktop-img {
+  display: block;
+}
+
+.mobile-img {
+  display: none;
+}
+
+.hero__banner-text {
+  width: 100%;
+  margin: 0 40px;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-text h2 {
+  font-size: 40px;
+}
+
+.hero-text p {
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 63%);
+}
+
+.btn-shop {
+  display: flex;
+  align-items: center;
+  justify-items: start;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 7px;
+  cursor: pointer;
+}
+.btn-shop:hover {
+  transform: translate(0, 5px);
+  color: hsl(0, 0%, 63%);
+}
+
+.btn-left-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  width: 9%;
+  position: absolute;
+  top: 27.9rem;
+  left: 59.3%;
+  z-index: 10;
+  background-color: hsl(0, 0%, 0%);
+}
+
+.arrows {
+  padding: 0.5rem;
+  width: 28px;
+  height: auto;
+}
+
+.left-btn,
+.right-btn {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 0%);
+  padding: 0.4rem 1.4rem;
+}
+
+.left-btn:hover,
+.right-btn:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 63%);
+  transform: translate(0, -5px), scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 3rem;
+}
+
+.about h2 {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+.about p {
+  line-height: 1.6rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 100%;
+  font-weight: 500;
+  color: hsl(0, 0%, 63%);
+}
+
+.about img {
+  display: inline-block;
+  width: 30%;
+  height: 250px;
+}
+
+@media (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  /* General Styles */
+  body {
+    margin: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+  }
+
+  /* NAV BAR   */
+  #web-nav {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: block;
+  }
+
+  .nav-container {
+    flex-direction: row-reverse;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .nav-container {
+    position: relative;
+    background-color: transparent;
+  }
+
+  /* Logo Styling */
+  .nav-logo {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  /* Hamburger Button */
+  .nav-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    top: 0.9rem;
+    left: 1rem;
+  }
+
+  .hamburger-icon,
+  .close-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 30%;
+    height: 50vh;
+    background-color: hsl(0, 0%, 27%);
+    text-align: center;
+    transform: translate(0, -5px), scale(1);
+    transition: all 0.3s ease-in-out;
+    z-index: 11;
+  }
+
+  .mobile-menu.hidden {
+    display: none;
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    padding: 30px;
+  }
+
+  .menu-links li {
+    margin: 5px 0;
+  }
+
+  .menu-link {
+    flex-direction: column;
+    gap: 2px;
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-size: 10px;
+    text-transform: capitalize;
+  }
+
+  /* Transition for Visible Menu */
+  .mobile-menu.active {
+    transform: translateX(0);
+  }
+
+  /* BODY STYLING */
+  .section-1 {
+    position: relative;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+  .mobile-img {
+    display: block;
+  }
+
+  .sl-row {
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+  .sl-column {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero-img img {
+    width: 100vw;
+    height: auto;
+  }
+
+  .hero__banner-text {
+    width: 100%;
+    padding: 0 32px;
+  }
+
+  .hero-text h2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .hero-text p {
+    font-size: 12px;
+    line-height: 1rem;
+    font-weight: 500;
+  }
+
+  .btn-shop {
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 7px;
+    cursor: pointer;
+  }
+
+  .btn-left-right {
+    position: relative;
+    width: 9%;
+    top: -344%;
+    left: 80.4%;
+  }
+
+  .arrows {
+    padding: 3px;
+    width: 16px;
+    height: auto;
+  }
+
+  .left-btn,
+  .right-btn {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 0%);
+    padding: 0.4rem 1.4rem;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 30px;
+  }
+
+  .about img {
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+  }
+
+  .about h2 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: px;
+    margin-bottom: 5px;
+  }
+
+  .about p {
+    line-height: 1rem;
+    font-size: 10px;
+    font-weight: 500;
+    width: 100%;
+    font-weight: 500;
+    color: hsl(0, 0%, 63%);
+  }
+}
