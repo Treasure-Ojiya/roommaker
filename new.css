@@ -117,7 +117,7 @@ ul {
   color: hsl(0, 0%, 63%);
 }
 
-.btn-shop {
+.btn {
   display: flex;
   align-items: center;
   justify-items: start;
@@ -127,9 +127,24 @@ ul {
   letter-spacing: 7px;
   cursor: pointer;
 }
-.btn-shop:hover {
+
+.btn {
+  border: none;
+  background: none;
+}
+
+.btn a:hover {
   transform: translate(0, 5px);
   color: hsl(0, 0%, 63%);
+}
+.btn a:active {
+  color: hsl(0, 0%, 0%);
+}
+.btn a:visited {
+  color: hsl(0, 0%, 0%);
+}
+.btn a:focus {
+  color: hsl(0, 0%, 0%);
 }
 
 .btn-left-right {
@@ -196,14 +211,9 @@ ul {
 }
 
 @media (max-width: 768px) {
-  html {
-    overflow-x: hidden;
-  }
-
   /* General Styles */
   body {
     margin: 0;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
   }
 
   /* NAV BAR   */
@@ -232,14 +242,14 @@ ul {
   /* Logo Styling */
   .nav-logo {
     position: absolute;
-    top: 1rem;
+    top: 2rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
   }
 
   .logo {
-    width: 60px;
+    width: 70px;
   }
 
   /* Hamburger Button */
@@ -249,7 +259,7 @@ ul {
     cursor: pointer;
     z-index: 10;
     position: absolute;
-    top: 0.9rem;
+    top: 2rem;
     left: 1rem;
   }
 
@@ -264,7 +274,7 @@ ul {
     position: absolute;
     top: 10%;
     left: 0;
-    width: 30%;
+    width: 25%;
     height: 50vh;
     background-color: hsl(0, 0%, 27%);
     text-align: center;
@@ -298,6 +308,7 @@ ul {
   /* Transition for Visible Menu */
   .mobile-menu.active {
     transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
   }
 
   /* BODY STYLING */
@@ -352,10 +363,10 @@ ul {
   }
 
   .btn-left-right {
-    position: relative;
+    position: fixed;
     width: 9%;
-    top: -344%;
-    left: 80.4%;
+    top: 70%;
+    left: 81.6%;
   }
 
   .arrows {
