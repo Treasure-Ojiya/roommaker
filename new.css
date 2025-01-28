@@ -210,6 +210,32 @@ ul {
   height: 250px;
 }
 
+/* @media (max-width: 375px) {
+  .section-1 {
+    position: relative;
+  }
+
+  .btn-left-right {
+    position: absolute;
+    width: 9%;
+    top: 12%;
+    left: 68%;
+  }
+
+  .arrows {
+    padding: 3px;
+    width: 16px;
+    height: auto;
+  }
+
+  .left-btn,
+  .right-btn {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 0%);
+    padding: 0.4rem 1.4rem;
+  }
+} */
+
 @media (max-width: 768px) {
   /* General Styles */
   body {
@@ -379,8 +405,10 @@ ul {
   .btn-left-right {
     position: absolute;
     width: 9%;
-    top: 68%;
-    left: 68%;
+    /* top: 68%;
+    left: 68%; */
+    top: 63%;
+    left: 63%;
   }
 
   .arrows {
