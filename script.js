@@ -48,3 +48,19 @@ closeMenuBtn.addEventListener("click", () => {
   mobileMenu.classList.add("hidden");
   mobileMenu.classList.add("mobile-nav");
 });
+
+const navContainer = document.querySelector(".nav-container");
+const nav = document.querySelector(".nav");
+const navHeight = nav.getBoundingClientRect().height;
+
+const stickyNav = (entries) => {
+  const [entry] = entries;
+  if (!entry.isIntersecting) nav.classList.add("sticky");
+  else nav.classList.remove("sticky");
+};
+const navObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
+observer.observe(navContainer);
