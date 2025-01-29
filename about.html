@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.google.com/specimen/League+Spartan"
+    />
+    <link rel="stylesheet" href="new.css" />
+
+    <title>Frontend Mentor | Room homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: hsl(0, 0%, 100%);
+        background-color: hsl(0, 0%, 0%);
+      }
+      .attribution a {
+        color: hsl(0, 100%, 50%);
+        text-decoration: none;
+      }
+    </style>
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <section class="section-1">
+      <div id="web-nav" class="menu-container">
+        <nav class="nav">
+          <a href="index.html">
+            <img src="images/logo.svg" alt="" class="logo"
+          /></a>
+          <div class="nav-links menu-hidden" id="menu">
+            <ul>
+              <li><a href="#" class="nav-link">home</a></li>
+              <li><a href="#" class="nav-link">shop</a></li>
+              <li><a href="#" class="nav-link">about</a></li>
+              <li><a href="#" class="nav-link">contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div id="mobile-nav" class="nav-container">
+        <nav>
+          <!-- Logo -->
+          <a href="index.html" class="nav-logo">
+            <img src="images/logo.svg" alt="Logo" class="logo" />
+          </a>
+
+          <!-- Hamburger Button -->
+
+          <!-- Navigation Menu -->
+          <div id="mobile-menu" class="mobile-menu hidden">
+            <!-- Close Button -->
+            <button id="close-menu-btn" class="nav-toggle-btn">
+              <img
+                src="images/icon-close.svg"
+                alt="Close Menu"
+                class="close-icon"
+              />
+            </button>
+
+            <!-- Menu Links -->
+            <ul class="menu-links">
+              <li><a href="index.html" class="menu-link">Home</a></li>
+              <li><a href="shop.html" class="menu-link">Shop</a></li>
+              <li><a href="about.html" class="menu-link">About</a></li>
+              <li><a href="contact.html" class="menu-link">Contact</a></li>
+            </ul>
+          </div>
+          <button id="toggle-menu" class="nav-toggle-btn">
+            <img
+              src="images/icon-hamburger.svg"
+              alt="Open Menu"
+              class="hamburger-icon"
+            />
+          </button>
+        </nav>
+      </div>
+
+      <div>
+        <h1>ABOUT US</h1>
+        <img src="images/desktop-image-hero-1.jpg" alt="" />
+        <img src="images/mobile-image-hero-1.jpg" alt="" />
+        <p>
+          At Room, we take keen interests in delivering high quality products to
+          our customers. We bring life into ypur space with a touch of elegance
+          and class. Our team is made up of people who are passionate about what
+          they do. We are proud to say that our products have been featured in
+          some of the most prestigious design magazines in the world. Proud to
+          also say our products are used by some of the most prestigious
+          companies in the world, highend luxury homes and private residences,
+          hotels and resorts, to name a few. Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Sit ipsa accusamus fugiat aliquam ipsum
+          beatae iusto? Ad quibusdam repellat fugiat saepe perferendis
+          doloribus, sint officiis illum! Dolores animi minus possimus. Lorem
+          ipsum dolor sit, amet consectetur adipisicing elit. Ratione
+          perspiciatis hic voluptates consectetur. Quo nulla mollitia, ea dicta
+          ut numquam facere beatae dolorum deleniti. Laboriosam numquam totam
+          voluptatum iure corporis! So, what are you waiting for? Get in touch
+          with us today.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

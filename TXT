@@ -71,3 +71,6 @@ div class="sl-column">
               <a class="btn-shop">SHOP NOW&rarr;</a>
             </div>
           </div> -->
+
+
+transition: clip-path .8s cubic-bezier(.65,0,.35,1) .2s;

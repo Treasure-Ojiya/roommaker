@@ -14,11 +14,19 @@ body {
   position: absolute;
   top: 2rem;
   left: 2rem;
+  /* display: flex;
+  align-items: start;
+  justify-items: flex-start;
+  gap: 5rem; */
+  z-index: 10;
+  padding: 1rem;
+}
+
+.nav {
   display: flex;
   align-items: start;
   justify-items: flex-start;
   gap: 5rem;
-  z-index: 10;
 }
 
 ul {
@@ -56,8 +64,13 @@ ul {
 /* STICKY NAV */
 .nav.sticky {
   position: fixed;
-  background-color: hsl(0, 0%, 27%);
+  top: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 27%, 0.5);
+  width: 100%;
   z-index: 100;
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
 }
 
 /* BODY STYLES */
@@ -416,7 +429,7 @@ ul {
     /* top: 68%;
     left: 68%; */
     top: 43%;
-    left: 68.8%;
+    left: 66%;
   }
 
   .arrows {

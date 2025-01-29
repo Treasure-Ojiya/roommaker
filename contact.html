@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.google.com/specimen/League+Spartan"
+    />
+    <link rel="stylesheet" href="new.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <title>Frontend Mentor | Room homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        position: relative;
+      }
+      .menu-container {
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: hsla(0, 0%, 27%, 0.5);
+      }
+      .nav-link:hover {
+        color: hsl(0, 0%, 100%);
+        text-decoration: underline;
+        transform: scale(1);
+      }
+
+      /* .contact {
+        position: absolute;
+        top: 110%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+      } */
+
+      .contact-img {
+        width: 100vw;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: hsl(0, 0%, 63%);
+      }
+
+      .contact-card {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .contact-card form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      input {
+        width: 30%;
+        border: none;
+        border-bottom: 1px solid hsl(0, 0%, 27%);
+      }
+
+      .btn-submit {
+        width: 10%;
+        padding: 0.6rem;
+        font-size: 15px;
+        color: hsl(0, 0%, 0%);
+        background: none;
+        border: 1px solid hsl(0, 0%, 27%);
+      }
+
+      .btn-submit:hover {
+        background-color: hsl(0, 0%, 63%);
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: hsl(0, 0%, 100%);
+        background-color: hsl(0, 0%, 0%);
+      }
+      .attribution a {
+        color: hsl(0, 100%, 50%);
+        text-decoration: none;
+      }
+    </style>
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <section class="section-1">
+      <div id="web-nav" class="menu-container">
+        <nav class="nav">
+          <a href="index.html">
+            <img src="images/logo.svg" alt="" class="logo"
+          /></a>
+          <div class="nav-links menu-hidden" id="menu">
+            <ul>
+              <li><a href="#" class="nav-link">home</a></li>
+              <li><a href="#" class="nav-link">shop</a></li>
+              <li><a href="#" class="nav-link">about</a></li>
+              <li><a href="#" class="nav-link">contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div id="mobile-nav" class="nav-container">
+        <nav>
+          <!-- Logo -->
+          <a href="index.html" class="nav-logo">
+            <img src="images/logo.svg" alt="Logo" class="logo" />
+          </a>
+
+          <!-- Hamburger Button -->
+
+          <!-- Navigation Menu -->
+          <div id="mobile-menu" class="mobile-menu hidden">
+            <!-- Close Button -->
+            <button id="close-menu-btn" class="nav-toggle-btn">
+              <img
+                src="images/icon-close.svg"
+                alt="Close Menu"
+                class="close-icon"
+              />
+            </button>
+
+            <!-- Menu Links -->
+            <ul class="menu-links">
+              <li><a href="index.html" class="menu-link">Home</a></li>
+              <li><a href="shop.html" class="menu-link">Shop</a></li>
+              <li><a href="about.html" class="menu-link">About</a></li>
+              <li><a href="contact.html" class="menu-link">Contact</a></li>
+            </ul>
+          </div>
+          <button id="toggle-menu" class="nav-toggle-btn">
+            <img
+              src="images/icon-hamburger.svg"
+              alt="Open Menu"
+              class="hamburger-icon"
+            />
+          </button>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section-2 contact">
+      <div>
+        <h1>CONTACT PAGE</h1>
+        <img src="images/desktop-image-hero-1.jpg" alt="" class="contact-img" />
+        <!-- <img src="images/mobile-image-hero-1.jpg" alt="" /> -->
+        <p>
+          We are motivated to keep delivering quality products and services to
+          our customers. If you have any questions, comments or suggestions,
+          please don't hesitate to contact us.
+        </p>
+      </div>
+
+      <h2>Contact us</h2>
+      <h3>Get in touch, let's create something amazing!</h3>
+
+      <div class="contact-card">
+        <form action="" class="contact-form">
+          <input type="text" placeholder="Full name" class="input" />
+          <input type="email" placeholder="Email" class="input" />
+          <input type="text" placeholder="Subject" class="input" />
+        </form>
+        <button class="btn-submit">Submit</button>
+      </div>
+    </section>
+  </body>
+</html>

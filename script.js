@@ -49,9 +49,10 @@ closeMenuBtn.addEventListener("click", () => {
   mobileMenu.classList.add("mobile-nav");
 });
 
-const navContainer = document.querySelector(".nav-container");
+const navContainer = document.querySelector(".menu-container");
 const nav = document.querySelector(".nav");
 const navHeight = nav.getBoundingClientRect().height;
+console.log(navHeight);
 
 const stickyNav = (entries) => {
   const [entry] = entries;
@@ -63,4 +64,4 @@ const navObserver = new IntersectionObserver(stickyNav, {
   threshold: 0,
   rootMargin: `-${navHeight}px`,
 });
-observer.observe(navContainer);
+navObserver.observe(navContainer);
