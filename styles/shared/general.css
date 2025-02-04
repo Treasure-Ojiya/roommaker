@@ -18,18 +18,21 @@ body {
   align-items: start;
   justify-items: flex-start;
   gap: 5rem; */
+  width: 100vw;
   z-index: 10;
   padding: 1rem;
+  /* overflow-y: hidden; */
 }
 
 .nav {
   display: flex;
   align-items: start;
   justify-items: flex-start;
-  gap: 5rem;
+  /* justify-content: space-between; */
+  gap: 9rem;
 }
 
-ul {
+.nav-links ul {
   display: flex;
   gap: 3rem;
   list-style: none;
@@ -66,11 +69,56 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: hsla(0, 0%, 27%, 0.5);
+  background-color: hsla(0, 0%, 0%, 0.8);
   width: 100%;
   z-index: 100;
   padding: 2rem;
   transition: all 0.3s ease-in-out;
+}
+
+.orders-link {
+  color: white;
+}
+
+.returns-text {
+  display: block;
+  font-size: 13px;
+}
+
+.orders-text {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-link {
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cart-icon {
+  width: 50px;
+}
+
+.cart-text {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-quantity {
+  color: rgb(240, 136, 4);
+  font-size: 16px;
+  font-weight: 700;
+
+  position: absolute;
+  top: 4px;
+  left: 22px;
+
+  width: 26px;
+  text-align: center;
 }
 
 /* BODY STYLES */
@@ -256,6 +304,107 @@ ul {
     padding: 0.4rem 1.4rem;
   }
 } */
+
+footer {
+  padding: 4rem;
+}
+
+h5 {
+  font-size: 14px;
+  color: hsl(0, 0%, 100%);
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.team p {
+  color: hsl(0, 0%, 100%);
+}
+
+.team-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: hsl(0, 0%, 37%);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  color: hsl(0, 0%, 37%);
+}
+
+.footer_text {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-logo {
+  width: 100px;
+  height: auto;
+}
+
+.footer_nav-links ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer_nav-links ul li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 37%);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subscribe p {
+  color: hsl(0, 0%, 100%);
+}
+
+.footer-input {
+  width: 90%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid hsl(41, 71%, 74%);
+  padding: 10px;
+}
+
+.footer-input:focus {
+  outline: none;
+}
+
+.btn-subscribe {
+  width: 80%;
+  background: none;
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(41, 71%, 74%);
+  padding: 10px;
+}
+
+.btn-subscribe:hover {
+  background-color: hsl(41, 71%, 74%, 0.5);
+}
 
 @media (max-width: 768px) {
   /* General Styles */
@@ -466,7 +615,7 @@ ul {
 
   .about p {
     line-height: 1rem;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     width: 100%;
     font-weight: 500;

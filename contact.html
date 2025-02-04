@@ -15,12 +15,14 @@
       rel="stylesheet"
       href="https://fonts.google.com/specimen/League+Spartan"
     />
-    <link rel="stylesheet" href="new.css" />
-    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="styles/shared/general.css" />
+    <link rel="stylesheet" href="styles/shared/contact.css" />
     <title>Frontend Mentor | Room homepage</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
+    <!-- <style>
+      @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
       * {
         padding: 0;
         margin: 0;
@@ -28,29 +30,61 @@
       }
 
       body {
-        position: relative;
+        font-family: "League Spartan", sans-serif;
+      }
+
+      .header {
+        margin-top: 20px;
       }
       .menu-container {
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         background-color: hsla(0, 0%, 27%, 0.5);
+        margin-bottom: 20px;
+        padding: 1.5rem;
       }
-      .nav-link:hover {
+      ul li a:hover {
         color: hsl(0, 0%, 100%);
         text-decoration: underline;
-        transform: scale(1);
       }
 
-      /* .contact {
-        position: absolute;
-        top: 110%;
-        left: 52%;
-        transform: translate(-50%, -50%);
-      } */
+      .bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+      }
 
-      .contact-img {
-        width: 100vw;
+      .bg-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        flex-direction: column;
+        margin: 100px auto;
+        width: 80%;
+        height: auto;
+        background-image: linear-gradient(
+            hsl(205, 23%, 69%, 0.5),
+            hsl(41, 71%, 74%, 0.5)
+          ),
+          url(Images/desktop-image-hero-1.jpg);
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        border-radius: 10px;
+        padding: 180px 0;
+      }
+
+      .contact-text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        max-width: 600px;
       }
 
       h1 {
@@ -58,9 +92,37 @@
       }
 
       p {
+        font-weight: bold;
         font-size: 1rem;
         line-height: 1.6;
-        color: hsl(0, 0%, 63%);
+        color: hsl(0, 0%, 0%);
+      }
+
+      .section-form {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr;
+        align-items: end;
+        padding: auto 10rem;
+        margin: auto 80px 50px 80px;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        /* padding: 10px;
+        margin: 0 10px; */
+      }
+
+      h2 {
+        font-family: "Great Vibes", cursive;
+        font-size: 3rem;
+      }
+      h3 {
+        font-family: "League Spartan", sans-serif;
+        font-size: 2rem;
+        width: 50%;
       }
 
       .contact-card {
@@ -75,23 +137,36 @@
         gap: 2rem;
       }
 
-      input {
-        width: 30%;
+      .input {
+        width: 80%;
         border: none;
-        border-bottom: 1px solid hsl(0, 0%, 27%);
+        border-bottom: 1px solid hsl(41, 71%, 74%);
+      }
+      .input:focus {
+        outline: none;
+      }
+      textarea {
+        border: none;
+        resize: vertical;
       }
 
       .btn-submit {
-        width: 10%;
+        width: 20%;
         padding: 0.6rem;
         font-size: 15px;
         color: hsl(0, 0%, 0%);
         background: none;
-        border: 1px solid hsl(0, 0%, 27%);
+        border: 1px solid hsl(41, 71%, 74%);
       }
 
       .btn-submit:hover {
-        background-color: hsl(0, 0%, 63%);
+        background-color: hsl(41, 71%, 74%, 0.5);
+      }
+
+      .map-div iframe {
+        border: 0;
+        padding-top: 10px;
+        margin-bottom: 32px;
       }
 
       .attribution {
@@ -104,12 +179,12 @@
         color: hsl(0, 100%, 50%);
         text-decoration: none;
       }
-    </style>
+    </style> -->
 
     <script src="script.js" defer></script>
   </head>
   <body>
-    <section class="section-1">
+    <section class="header">
       <div id="web-nav" class="menu-container">
         <nav class="nav">
           <a href="index.html">
@@ -117,10 +192,10 @@
           /></a>
           <div class="nav-links menu-hidden" id="menu">
             <ul>
-              <li><a href="#" class="nav-link">home</a></li>
-              <li><a href="#" class="nav-link">shop</a></li>
-              <li><a href="#" class="nav-link">about</a></li>
-              <li><a href="#" class="nav-link">contact</a></li>
+              <li><a href="index.html" class="nav-link">home</a></li>
+              <li><a href="shop.html" class="nav-link">shop</a></li>
+              <li><a href="contact.html" class="nav-link">about</a></li>
+              <li><a href="about.html" class="nav-link">contact</a></li>
             </ul>
           </div>
         </nav>
@@ -165,29 +240,121 @@
       </div>
     </section>
 
-    <section class="section-2 contact">
-      <div>
-        <h1>CONTACT PAGE</h1>
-        <img src="images/desktop-image-hero-1.jpg" alt="" class="contact-img" />
-        <!-- <img src="images/mobile-image-hero-1.jpg" alt="" /> -->
-        <p>
-          We are motivated to keep delivering quality products and services to
-          our customers. If you have any questions, comments or suggestions,
-          please don't hesitate to contact us.
-        </p>
-      </div>
-
-      <h2>Contact us</h2>
-      <h3>Get in touch, let's create something amazing!</h3>
-
-      <div class="contact-card">
-        <form action="" class="contact-form">
-          <input type="text" placeholder="Full name" class="input" />
-          <input type="email" placeholder="Email" class="input" />
-          <input type="text" placeholder="Subject" class="input" />
-        </form>
-        <button class="btn-submit">Submit</button>
+    <section class="bg contact">
+      <div class="bg-container">
+        <div class="contact-text">
+          <h1>CONTACT PAGE</h1>
+          <p>
+            We are motivated to keep delivering quality products and services to
+            our customers. If you have any questions, comments or suggestions,
+            please don't hesitate to contact us.
+          </p>
+        </div>
       </div>
     </section>
+
+    <!-- FORM SECTION -->
+    <section class="section-form">
+      <div class="form">
+        <h2>Contact us</h2>
+        <h3>Get in touch, let's create something amazing!</h3>
+        <div class="contact-card">
+          <form action="" class="contact-form">
+            <input type="text" placeholder="Full name" class="input" />
+            <input type="email" placeholder="Email" class="input" />
+            <textarea
+              name=""
+              id=""
+              cols="10"
+              rows="10"
+              id=""
+              placeholder="Message"
+              class="input"
+            ></textarea>
+          </form>
+          <button class="btn-submit">Submit</button>
+        </div>
+      </div>
+
+      <div class="map-div">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240057.75222526534!2d3.
+            4166906471840397!3d6.423374555987742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+            1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!
+            4v1729972742639!5m2!1sen!2sng"
+          width="100%"
+          height="550"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer_text">
+          <a href="index.html">
+            <img src="images/logo.svg" alt="" class="footer-logo"
+          /></a>
+          <p style="color: hsl(0, 0%, 37%)">
+            We make designs interiors that are modern and minimalistic style
+          </p>
+        </div>
+
+        <div id="footer_web-nav" class="footer_menu-container">
+          <nav class="footer-nav">
+            <div class="footer_nav-links footer_menu-hidden" id="footer_menu">
+              <ul>
+                <li><a href="index.html" class="footer_nav-link">home</a></li>
+                <li><a href="shop.html" class="footer_nav-link">shop</a></li>
+                <li><a href="about.html" class="footer_nav-link">about</a></li>
+                <li>
+                  <a href="contact.html" class="footer_nav-link">contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <div class="team">
+          <p style="font-size: 14px">TEAM MEMBERS</p>
+          <ul class="team-list">
+            <li>Treasure Ojiya</li>
+            <li>Chizobi Uzor</li>
+            <li>Deborah Akande</li>
+            <li>Taofeek Bulus</li>
+            <li>Muna Adeyemi</li>
+          </ul>
+        </div>
+
+        <div class="subscribe">
+          <p style="font-size: 14px">SUBSCRIBE</p>
+          <input
+            type="email"
+            value=""
+            placeholder="Enter your email"
+            class="footer-input"
+          />
+          <p style="font-size: 12px; color: hsl(0, 0%, 63%)">
+            <i>* Get all the latest offer & info</i>
+          </p>
+          <button class="btn-subscribe">SUBMIT</button>
+
+          <p style="font-size: 12px; color: hsl(0, 0%, 63%)">
+            © 2025. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <div class="attribution">
+      <p>© 2021. All Rights Reserved</p>
+      <h6>Challenge by</h6>
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Treasure Ojiya</a>.
+    </div>
   </body>
 </html>

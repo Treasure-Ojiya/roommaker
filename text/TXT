@@ -1,3 +1,9 @@
+colors:  hsl(40, 100%, 95%)
+hsl(220, 15%, 20%)
+hsl(30, 10%, 50%)
+hsl(41, 71%, 74%)
+hsl(201, 70%, 30%)
+
 div class="sl-column">
             <div class="hero-img">
               <img src="images/desktop-image-hero-2.jpg" alt="" />
@@ -74,3 +80,68 @@ div class="sl-column">
 
 
 transition: clip-path .8s cubic-bezier(.65,0,.35,1) .2s;
+
+<div class="overlay">
+  <div class="modal">
+    <button class="close-modal">&times;</button>
+    <img src="images/desktop-image-hero-1.jpg" alt="" />
+    <div class="modal-content">
+      <h2>Product Name</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+        voluptas, voluptatum, quia, voluptatibus voluptate, voluptatem
+        repellat autem repellendus quibusdam nesciunt accusantium
+        accusamus. Quia, quas. Quia, quas.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+const quantity = Number(quantitySelector.value);
+
+ <div class="product-quantity-container">
+                <select class="js-quantity-selector${product.name}>
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+
+              PROD-547281  
+PROD-839472  
+PROD-193856  
+PROD-674920  
+PROD-285614  
+PROD-761493  
+PROD-948327  
+PROD-502738  
+PROD-319475  
+PROD-687204  
+PROD-125968  
+PROD-834671  
+PROD-492057  
+PROD-703214  
+PROD-576890  
+PROD-269341  
+PROD-948205  
+PROD-637892  
+PROD-815437  
+PROD-204675  
+PROD-983214  
+PROD-475602  
+PROD-190347  
+PROD-620983  
+PROD-357294  
+PROD-841075  
+PROD-290563  
+PROD-764823  
+PROD-518602  
+PROD-437981  

@@ -15,7 +15,7 @@
       rel="stylesheet"
       href="https://fonts.google.com/specimen/League+Spartan"
     />
-    <link rel="stylesheet" href="new.css" />
+    <link rel="stylesheet" href="styles/shared/general.css" />
 
     <title>Frontend Mentor | Room homepage</title>
 
@@ -39,7 +39,7 @@
       }
     </style>
 
-    <script src="script.js" defer></script>
+    <script src="script/script.js" defer></script>
   </head>
   <body>
     <section class="section-1">
@@ -237,8 +237,64 @@
       </div>
     </div>
 
+    <footer>
+      <div class="footer-container">
+        <div class="footer_text">
+          <a href="index.html">
+            <img src="images/logo.svg" alt="" class="footer-logo"
+          /></a>
+          <p style="color: hsl(0, 0%, 37%)">
+            We make designs interiors that are modern and minimalistic style
+          </p>
+        </div>
+
+        <div id="footer_web-nav" class="footer_menu-container">
+          <nav class="footer-nav">
+            <div class="footer_nav-links footer_menu-hidden" id="footer_menu">
+              <ul>
+                <li><a href="index.html" class="footer_nav-link">home</a></li>
+                <li><a href="shop.html" class="footer_nav-link">shop</a></li>
+                <li><a href="about.html" class="footer_nav-link">about</a></li>
+                <li>
+                  <a href="contact.html" class="footer_nav-link">contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <div class="team">
+          <p style="font-size: 14px">TEAM MEMBERS</p>
+          <ul class="team-list">
+            <li>Treasure Ojiya</li>
+            <li>Chizobi Uzor</li>
+            <li>Deborah Akande</li>
+            <li>Taofeek Bulus</li>
+            <li>Muna Adeyemi</li>
+          </ul>
+        </div>
+
+        <div class="subscribe">
+          <p style="font-size: 14px">SUBSCRIBE</p>
+          <input
+            type="email"
+            value=""
+            placeholder="Enter your email"
+            class="footer-input"
+          />
+          <p style="font-size: 12px; color: hsl(0, 0%, 63%)">
+            <i>* Get all the latest offer & info</i>
+          </p>
+          <button class="btn-subscribe">SUBMIT</button>
+          <p style="font-size: 12px; color: hsl(0, 0%, 63%)">
+            © 2025. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
     <div class="attribution">
-      Challenge by
+      <p>© 2021. All Rights Reserved</p>
+      <h6>Challenge by</h6>
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Treasure Ojiya</a>.
