@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "live-server": "^1.2.0"
+  },
+  "devDependencies": {
+    "jasmine": "^5.6.0",
+    "jest": "^29.7.0"
+  }
+}

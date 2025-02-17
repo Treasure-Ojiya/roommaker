@@ -20,31 +20,91 @@
     <!-- Font Awesome Latest Version (CDN) -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
     <title>Frontend Mentor | Room homepage</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-
-    <script src="script/cart.js"></script>
-    <script src="script/shop.js" defer></script>
   </head>
 
   <body>
     <div id="web-nav" class="menu-container">
       <nav class="nav">
-        <a href="index.html">
-          <img src="images/logo.svg" alt="" class="logo"
-        /></a>
-        <div class="nav-links menu-hidden" id="menu">
-          <ul>
-            <li><a href="index.html" class="nav-link">home</a></li>
-            <li><a href="shop.html" class="nav-link">shop</a></li>
-            <li><a href="about.html" class="nav-link">about</a></li>
-            <li><a href="contact.html" class="nav-link">contact</a></li>
+        <div class="web-nav-container">
+          <a href="index.html">
+            <img src="images/logo.svg" alt="" class="logo"
+          /></a>
+          <div class="nav-links menu-hidden" id="menu">
+            <ul>
+              <li><a href="index.html" class="nav-link">home</a></li>
+              <li><a href="shop.html" class="nav-link">shop</a></li>
+              <li><a href="about.html" class="nav-link">about</a></li>
+              <li><a href="contact.html" class="nav-link">contact</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-search-cart">
+            <div class="nav-search">
+              <input type="text" class="search-input" />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="nav-header-right-section">
+              <a class="orders-link header-link" href="orders.html">
+                <span class="returns-text">Returns</span>
+                <span class="orders-text">& Orders</span>
+              </a>
+
+              <a class="cart-link header-link" href="checkout.html">
+                <img class="cart-icon" src="product-img/cart/cart-icon.png" />
+                <div class="cart-quantity js-cart-quantity"></div>
+                <!-- <div class="cart-text">Cart</div> -->
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div id="mobile-nav" class="mobile-nav-container">
+      <nav>
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo.svg" alt="Logo" class="logo" />
+        </a>
+
+        <!-- Hamburger Button -->
+
+        <!-- Navigation Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+          <!-- Close Button -->
+          <button id="close-menu-btn" class="nav-toggle-btn">
+            <img
+              src="images/icon-close.svg"
+              alt="Close Menu"
+              class="close-icon"
+            />
+          </button>
+
+          <!-- Menu Links -->
+          <ul class="menu-links">
+            <li><a href="#" class="menu-link">Home</a></li>
+            <li><a href="#" class="menu-link">Shop</a></li>
+            <li><a href="#" class="menu-link">About</a></li>
+            <li><a href="#" class="menu-link">Contact</a></li>
           </ul>
         </div>
+        <button id="toggle-menu" class="nav-toggle-btn">
+          <img
+            src="images/icon-hamburger.svg"
+            alt="Open Menu"
+            class="hamburger-icon"
+          />
+        </button>
 
         <div class="nav-header-right-section">
           <a class="orders-link header-link" href="orders.html">
@@ -54,8 +114,8 @@
 
           <a class="cart-link header-link" href="checkout.html">
             <img class="cart-icon" src="product-img/cart/cart-icon.png" />
-            <div class="cart-quantity js-cart-quantity">0</div>
-            <div class="cart-text">Cart</div>
+            <div class="cart-quantity js-cart-quantity"></div>
+            <!-- <div class="cart-text">Cart</div> -->
           </a>
         </div>
       </nav>
@@ -63,11 +123,9 @@
 
     <section class="products-page">
       <div class="header">
-        <p class="sellout">The Best Furniture For Your Home</p>
+        <p class="sellout">The Best Furniture For Your Space</p>
 
         <h2>OUR COLLECTION</h2>
-        <input type="text" class="search-input" />
-        <button class="search-button">Search</button>
       </div>
 
       <div class="product-cart">
@@ -91,7 +149,7 @@
             <img src="images/logo.svg" alt="" class="footer-logo"
           /></a>
           <p style="color: hsl(0, 0%, 37%)">
-            We make designs interiors that are modern and minimalistic style
+            We make design interiors that are modern and minimalistic
           </p>
         </div>
 
@@ -246,5 +304,8 @@
     //   // 4. Initial display of cart (when the page loads):
     //   displayCart();
     // </script> -->
+    <!-- <script src="script/cart.js"></script> -->
+    <script src="script/product.js"></script>
+    <script type="module" src="script/shop.js"></script>
   </body>
 </html>

@@ -3,6 +3,10 @@
 body {
   font-family: "League Spartan", sans-serif;
   height: 100vh;
+  margin: 0;
+  padding: 0;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 /* NAV BAR DESKTOP */
@@ -14,35 +18,34 @@ body {
   position: absolute;
   top: 2rem;
   left: 2rem;
-  /* display: flex;
-  align-items: start;
-  justify-items: flex-start;
-  gap: 5rem; */
-  width: 100vw;
+  width: 100%;
   z-index: 10;
   padding: 1rem;
-  /* overflow-y: hidden; */
 }
 
 .nav {
   display: flex;
-  align-items: start;
-  justify-items: flex-start;
+  align-items: center;
   /* justify-content: space-between; */
-  gap: 9rem;
+  gap: 12rem;
+  /* flex-wrap: wrap; */
+  width: 100%;
+  padding: rem;
 }
 
 .nav-links ul {
   display: flex;
-  gap: 3rem;
+  flex-wrap: wrap;
+  gap: 2rem;
   list-style: none;
+  padding: 0;
 }
 
 .nav-link {
   text-decoration: none;
   color: hsl(0, 0%, 100%);
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.3rem;
   transition: color 0.3s ease-in-out;
 }
 
@@ -95,6 +98,7 @@ body {
   color: white;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
 }
 
@@ -115,7 +119,7 @@ body {
 
   position: absolute;
   top: 4px;
-  left: 22px;
+  left: 17px;
 
   width: 26px;
   text-align: center;
@@ -147,12 +151,9 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.hero-img {
-  /* display: block; */
-  width: 100%;
-}
 .hero-img img {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   height: 500px;
 }
 
@@ -274,39 +275,27 @@ body {
 }
 
 .about img {
-  display: inline-block;
-  width: 30%;
-  height: 250px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
 }
 
-/* @media (max-width: 375px) {
-  .section-1 {
-    position: relative;
-  }
-
-  .btn-left-right {
-    position: absolute;
-    width: 9%;
-    top: 12%;
-    left: 68%;
-  }
-
-  .arrows {
-    padding: 3px;
-    width: 16px;
-    height: auto;
-  }
-
-  .left-btn,
-  .right-btn {
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(0, 0%, 0%);
-    padding: 0.4rem 1.4rem;
-  }
-} */
-
 footer {
-  padding: 4rem;
+  padding: 2rem;
+  background-color: hsl(0, 0%, 0%);
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  /* color: hsl(0, 0%, 37%); */
+}
+.footer-logo {
+  width: 80px;
+  height: auto;
 }
 
 h5 {
@@ -332,16 +321,6 @@ h5 {
   color: hsl(0, 0%, 37%);
 }
 
-.footer-container {
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  justify-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  color: hsl(0, 0%, 37%);
-}
-
 .footer_text {
   width: 30%;
   display: flex;
@@ -349,11 +328,6 @@ h5 {
   gap: 1rem;
   margin: 0;
   padding: 0;
-}
-
-.footer-logo {
-  width: 100px;
-  height: auto;
 }
 
 .footer_nav-links ul {
@@ -406,6 +380,48 @@ h5 {
   background-color: hsl(41, 71%, 74%, 0.5);
 }
 
+@media (max-width: 480px) {
+  .section-1 {
+    position: relative;
+  }
+
+  .btn-left-right {
+    position: absolute;
+    width: 7%;
+
+    top: 100rem;
+    left: 50%;
+  }
+
+  footer {
+    padding: 1rem;
+    background-color: hsl(0, 0%, 0%);
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-items: center;
+    gap: 0.5rem;
+    /* color: hsl(0, 0%, 37%); */
+  }
+
+  .team {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btn-subscribe {
+    width: 70%;
+    background: none;
+    color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(41, 71%, 74%);
+    padding: 8px;
+  }
+}
+
 @media (max-width: 768px) {
   /* General Styles */
   body {
@@ -422,7 +438,7 @@ h5 {
   }
 
   .nav-container {
-    flex-direction: row-reverse;
+    flex-direction: column;
   }
 
   ul {
@@ -444,8 +460,8 @@ h5 {
     z-index: 10;
   }
 
-  .logo {
-    width: 70px;
+  .footer-logo {
+    width: 60px;
   }
 
   /* Hamburger Button */
@@ -528,11 +544,19 @@ h5 {
     flex-direction: column;
     gap: 2rem;
   }
-
+  .hero-img {
+    /* display: block; */
+    width: 100%;
+  }
   .hero-img img {
+    width: 100%;
+    height: 500px;
+  }
+
+  /* .hero-img img {
     width: 100vw;
     height: auto;
-  }
+  } */
 
   .hero__banner-text {
     width: 100%;
@@ -541,7 +565,6 @@ h5 {
 
   .hero-text h2 {
     font-size: 20px;
-    font-weight: bold;
   }
 
   .hero-text p {
@@ -621,4 +644,99 @@ h5 {
     font-weight: 500;
     color: hsl(0, 0%, 63%);
   }
+
+  footer {
+    background-color: hsl(0, 0%, 0%);
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Tablet Styles (up to 1024px) */
+@media (max-width: 1024px) {
+  /* Adjusting image sizes */
+  .hero-img img {
+    width: 500px;
+    height: auto;
+  }
+
+  .hero__banner-text {
+    width: 70%;
+    padding: 0 32px;
+  }
+
+  .btn-left-right {
+    position: absolute;
+    width: 5%;
+
+    top: 46.2%;
+    left: 48.9%;
+    /* transform: translateX(-50%); */
+  }
+  .arrows {
+    padding: 2px;
+    width: 14px;
+    height: auto;
+  }
+
+  .left-btn,
+  .right-btn {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 0%);
+    padding: 0.4rem 1rem;
+  }
+
+  /* Hero Text */
+  .hero-text h2 {
+    font-size: 1.8rem; /* Resize for tablet */
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+  .section-1 {
+    position: relative;
+  }
+
+  .btn-left-right {
+    position: absolute;
+    width: 7%;
+
+    top: 35;
+    left: 46.7rem;
+  }
+
+  /* Make sure the hero image is fixed and covers space properly */
+  .hero-img img {
+    width: 750px;
+    height: 500px;
+  }
+
+  .hero-text h2 {
+    font-size: 3rem;
+  }
+
+  /* Make sections more spacious on desktop */
+  .about {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .about img {
+    width: 30%;
+    height: auto;
+  }
+
+  /* footer {
+    margin-top: auto;
+  }
+
+  .footer {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  } */
 }
