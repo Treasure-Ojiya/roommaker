@@ -15,6 +15,7 @@ allProducts.forEach((product) => {
                 />
               </div>
   
+              <div class="product-text">
               <div class="product-name limit-text-to-2-lines">
                 ${product.name}
               </div>
@@ -42,6 +43,7 @@ allProducts.forEach((product) => {
               >
                 Add to Cart
               </button>
+              </div>
             </div>
   `;
 });
