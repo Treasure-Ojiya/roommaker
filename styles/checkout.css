@@ -59,8 +59,8 @@
 }
 
 .cart-item-container:hover,
-.payment-summary:hover{
-  box-shadow: 0 1px 10px hsla(120, 100%, 23%, 0.6 );
+.payment-summary:hover {
+  box-shadow: 0 1px 10px hsla(120, 100%, 23%, 0.6);
   transition: 0.5s ease;
 }
 
@@ -132,7 +132,6 @@
        (they will divide up the remaining space evenly). */
   grid-template-columns: 100px 1fr 1fr;
   column-gap: 25px;
-  
 }
 
 @media (max-width: 1000px) {
@@ -207,9 +206,6 @@
 
 .payment-summary-row {
   display: grid;
-  /* 1fr auto; means the width of the 2nd column will be
-       determined by the elements inside the column (auto).
-       The 1st column will take up the remaining space. */
   grid-template-columns: 1fr auto;
 
   font-size: 15px;

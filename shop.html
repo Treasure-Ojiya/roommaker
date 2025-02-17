@@ -17,7 +17,6 @@
     />
     <link rel="stylesheet" href="styles/shared/general.css" />
     <link rel="stylesheet" href="styles/shop.css" />
-    <!-- Font Awesome Latest Version (CDN) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -27,8 +26,6 @@
     />
 
     <title>Frontend Mentor | Room homepage</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
 
   <body>
@@ -205,106 +202,6 @@
       >. Coded by <a href="#">Treasure Ojiya</a>.
     </div>
 
-    <!-- <script>
-      // 1. Initialize cart from localStorage or create empty:
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-      // 2. Function to display the cart items and calculate total:
-      function displayCart() {
-        const cartItemsList = document.getElementById("cart-items");
-        const cartTotal = document.getElementById("cart-total");
-
-        cartItemsList.innerHTML = ""; // Clear existing items
-        let total = 0;
-
-        // cart.forEach((item) => {
-        //   const li = document.createElement("li");
-        //   li.style.listStyle = "none";
-        //   li.textContent = `🛒${item.name} - $${item.price} x ${item.quantity}`;
-        //   cartItemsList.appendChild(li);
-
-        //   total += item.price * item.quantity;
-        // });
-
-        // cart.forEach((item, index) => {
-        //   // Add index to loop
-        //   const li = document.createElement("li");
-        //   li.style.listStyle = "none";
-        //   li.textContent = `🛒 ${item.name} - $${item.price} x ${item.quantity}`;
-
-        //   // Apply alternating background colors
-        //   if ((index + 1) % 2 === 0) {
-        //     // Even items
-        //     li.style.backgroundColor = "#f8f8f8"; // Light gray
-        //   } else {
-        //     // Odd items
-        //     li.style.backgroundColor = "#e0e0e0"; // Slightly darker gray
-        //   }
-
-        //   cartItemsList.appendChild(li);
-        //   total += item.price * item.quantity;
-        // });
-
-    //     cart.forEach((item, index) => {
-    //       const li = document.createElement("li");
-    //       li.style.listStyle = "none";
-    //       li.textContent = `🛒 ${item.name} - $${item.price} x ${item.quantity}`;
-
-    //       // Apply alternating background colors (nth-child styling)
-    //       li.style.backgroundColor =
-    //         (index + 1) % 2 === 0 ? "#f8f8f8" : "#e0e0e0";
-
-    //       // Create Delete Button
-    //       const removeButton = document.createElement("button");
-    //       removeButton.textContent = "❌";
-    //       removeButton.classList.add("remove-item");
-    //       removeButton.style.marginLeft = "10px"; // Space from text
-    //       removeButton.style.cursor = "pointer";
-
-    //       // Remove item when button is clicked
-    //       removeButton.addEventListener("click", () => {
-    //         cart.splice(index, 1); // Remove item from cart array
-    //         displayCart(); // Refresh cart UI
-    //       });
-
-    //       li.appendChild(removeButton); // Append button to <li>
-    //       cartItemsList.appendChild(li);
-    //       total += item.price * item.quantity;
-    //     });
-
-    //     cartTotal.textContent = total;
-    //   }
-
-    //   // 3. Add to cart functionality:
-    //   const productGrids = document.querySelectorAll(".product-grid"); // Select all product grids
-    //   console.log(productGrids);
-
-    //   productGrids.forEach((productGrid) => {
-    //     // Iterate through each product grid
-    //     productGrid.addEventListener("click", (event) => {
-    //       if (event.target.classList.contains("add-to-cart")) {
-    //         const itemName = event.target.dataset.name;
-    //         console.log(itemName);
-    //         const itemPrice = parseFloat(event.target.dataset.price);
-
-    //         const existingItem = cart.find((item) => item.name === itemName);
-
-    //         if (existingItem) {
-    //           existingItem.quantity++;
-    //         } else {
-    //           cart.push({ name: itemName, price: itemPrice, quantity: 1 });
-    //         }
-
-    //         localStorage.setItem("cart", JSON.stringify(cart)); // Save to local storage
-    //         displayCart();
-    //       }
-    //     });
-    //   });
-
-    //   // 4. Initial display of cart (when the page loads):
-    //   displayCart();
-    // </script> -->
-    <!-- <script src="script/cart.js"></script> -->
     <script src="script/product.js"></script>
     <script type="module" src="script/shop.js"></script>
   </body>

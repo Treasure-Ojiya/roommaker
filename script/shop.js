@@ -101,14 +101,3 @@ closeMenuBtn.addEventListener("click", () => {
   mobileMenu.classList.add("hidden");
   mobileMenu.classList.add("mobile-nav");
 });
-
-// function persistCartQuantity() {
-//   const savedQuantity = localStorage.getItem("cartQuantity");
-//   if (savedQuantity !== null && savedQuantity !== 0) {
-//     document.querySelector(".js-cart-quantity").textContent =
-//       JSON.parse(savedQuantity);
-//   }
-// }
-
-// // Call this function when the script runs to ensure the cart quantity is displayed on page load
-// persistCartQuantity();

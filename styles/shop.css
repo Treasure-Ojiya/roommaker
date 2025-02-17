@@ -68,7 +68,7 @@ body {
 }
 
 .nav-link:hover {
-  color: hsl(0, 0%, 27%);
+  font-size: 1.5rem;
   text-decoration: underline;
 }
 .nav-link::after {
@@ -257,6 +257,11 @@ nav ul li a {
   /* max-width: 50%; */
 }
 
+.product:hover {
+  box-shadow: 0 1px 10px hsla(120, 100%, 23%, 0.6);
+  transition: 0.5s ease;
+}
+
 .product-image-container {
   display: flex;
   justify-content: center;
@@ -294,9 +299,6 @@ nav ul li a {
   align-items: center;
   margin-bottom: 8px;
 
-  /* At first, the "Added to cart" message will
-     be invisible. Use JavaScript to change the
-     opacity and make it visible. */
   opacity: 0;
 
   /* Smooth transition effect */
@@ -315,6 +317,11 @@ nav ul li a {
   font-weight: 600;
   color: hsl(0, 0%, 100%);
   background-color: hsl(33, 47%, 30%);
+}
+
+.add-to-cart:hover {
+  transform: translate(0, 5px);
+  background-color: hsl(33, 47%, 30%, 0.9);
 }
 
 /* FOOTER STYLES */

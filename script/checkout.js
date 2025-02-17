@@ -5,7 +5,6 @@
 // import { hello } from "https://unpkg.com/supersimpledev@1.0.1/hello.esm.js";
 // import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 
-
 // hello();
 
 // const today = dayjs();
@@ -94,7 +93,7 @@
 //                     type="radio"
 //                     class="delivery-option-input"
 //                     name="delivery-option-${matchingProduct.id}"
-//                   /> 
+//                   />
 //                   <div>
 //                     <div class="delivery-option-date">Monday, June 13</div>
 //                     <div class="delivery-option-price">$9.99 - Shipping</div>
@@ -125,10 +124,9 @@
 //   });
 // });
 
-import {renderOrderSummary} from './checkout/orderSummary.js';
-import {renderPaymentSummary} from './checkout/paymentSummary.js';
-import './cart-oop.js'
+import { renderOrderSummary } from "./checkout/orderSummary.js";
+import { renderPaymentSummary } from "./checkout/paymentSummary.js";
+// import './cart-oop.js'
 
 renderOrderSummary();
 renderPaymentSummary();
-
