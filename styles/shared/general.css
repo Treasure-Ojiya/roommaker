@@ -50,7 +50,7 @@ body {
 }
 
 .nav-link:hover {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   text-decoration: underline;
 }
 .nav-link::after {
@@ -137,13 +137,13 @@ body {
   top: 0;
   transform: translate(0, 0), scale(1);
   transition: all 0.3s ease-in-out;
+  position: relative;
 }
 
 .sl-column {
   display: flex;
   align-items: center;
   width: 100%;
-  position: relative;
 }
 .hidden {
   display: none;
@@ -196,15 +196,12 @@ body {
   text-decoration: none;
   letter-spacing: 7px;
   cursor: pointer;
-}
-
-.btn {
   border: none;
   background: none;
 }
 
 .btn a:hover {
-  transform: translate(0, 5px);
+  transform: scale(1.05);
   color: hsl(0, 0%, 63%);
 }
 .btn a:active {
@@ -223,8 +220,8 @@ body {
   place-items: center;
   width: 9%;
   position: absolute;
-  top: 27.9rem;
-  left: 59.3%;
+  top: 89.4%;
+  left: 50%;
   z-index: 10;
   background-color: hsl(0, 0%, 0%);
 }
@@ -275,9 +272,91 @@ body {
 }
 
 .about img {
-  width: 100%;
-  max-width: 500px;
+  width: 80%;
+  max-width: 400px;
   height: auto;
+}
+
+/* .samples {
+  column-count: 2;
+  column-gap: 15px;
+}
+
+.samples img {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: block;
+} */
+
+/* .swiper {
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+} */
+
+.sample-section {
+  padding: 20px;
+  margin: 10px;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.sample-text {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.samples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.samples img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.samples img:hover {
+  transform: scale(1.05);
+}
+
+.sample-btn {
+  display: flex;
+  align-items: center;
+  justify-items: start;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 7px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.sample-btn a:hover {
+  transform: scale(1.05);
+  color: hsl(0, 0%, 63%);
+}
+.sample-btn a:active {
+  color: hsl(0, 0%, 0%);
+}
+.sample-btn a:visited {
+  color: hsl(0, 0%, 0%);
+}
+.sample-btn a:focus {
+  color: hsl(0, 0%, 0%);
 }
 
 footer {
@@ -617,15 +696,24 @@ h5 {
     padding: 0.4rem 1.4rem;
   }
 
-  .about {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 30px;
+  .about h2 {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    /* margin-bottom: 3px; */
+  }
+
+  .about p {
+    line-height: 1.1rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    width: 100%;
+    color: hsl(0, 0%, 63%);
   }
 
   .about img {
-    background-size: cover;
-    width: 100vw;
+    /* width: 80%; */
+    max-width: 150px;
     height: auto;
   }
 
@@ -650,8 +738,10 @@ h5 {
   }
 
   .footer-container {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    gap: 1rem;
+    place-content: center;
   }
 }
 
@@ -664,16 +754,23 @@ h5 {
   }
 
   .hero__banner-text {
-    width: 70%;
+    width: 50%;
     padding: 0 32px;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 63%);
   }
 
   .btn-left-right {
     position: absolute;
     width: 5%;
 
-    top: 46.2%;
-    left: 48.9%;
+    top: 87.4%;
+    left: 49.6%;
     /* transform: translateX(-50%); */
   }
   .arrows {
@@ -693,6 +790,39 @@ h5 {
   .hero-text h2 {
     font-size: 1.8rem; /* Resize for tablet */
   }
+
+  /* .about {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .about img {
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+  } */
+
+  .about h2 {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    /* margin-bottom: 3px; */
+  }
+
+  .about p {
+    line-height: 1.1rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    width: 100%;
+    color: hsl(0, 0%, 63%);
+  }
+
+  .about img {
+    /* width: 80%; */
+    max-width: 150px;
+    height: auto;
+  }
 }
 
 /* Desktop Styles */
@@ -706,7 +836,7 @@ h5 {
     width: 7%;
 
     top: 35;
-    left: 46.7rem;
+    left: 46.9rem;
   }
 
   /* Make sure the hero image is fixed and covers space properly */

@@ -70,9 +70,9 @@ body {
   width: 100%;
 } */
 
-.about {
+.about-page {
   margin: 100px auto;
-  width: 80%;
+  /* width: 80%; */
 }
 
 footer {
@@ -141,6 +141,11 @@ h5 {
   color: hsl(0, 0%, 37%);
   font-size: 1rem;
   font-weight: 500;
+}
+
+.footer_nav-links ul li a:hover {
+  color: hsl(0, 0%, 63%);
+  text-decoration: underline;
 }
 
 .subscribe {

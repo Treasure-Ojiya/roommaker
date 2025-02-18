@@ -75,9 +75,15 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: hsla(0, 0%, 27%, 0.5);
-  margin-bottom: 20px;
+  background-color: hsla(0, 0%, 0%, 0.8);
+  /* margin-bottom: 20px; */
   padding: 1.5rem;
+}
+
+.center-body{
+  max-width: 100%;
+  width: 1110px;
+  margin: 0 auto;
 }
 
 .bg {
@@ -95,22 +101,22 @@ body {
   text-align: center;
 
   flex-direction: column;
-  margin: 100px auto;
-  width: 80%;
+  /* margin: 70px auto; */
+  width: 100%;
   height: auto;
   background-image: linear-gradient(
-      hsl(205, 23%, 69%, 0.5),
-      hsl(41, 71%, 74%, 0.5)
+      hsl(0, 0%, 0%, 0.8),
+      hsl(0, 0%, 0%, 0.8)
     ),
     url("../..//../images/desktop-image-hero-1.jpg");
   background-position: center;
   background-size: cover;
   text-align: center;
-  border-radius: 10px;
   padding: 180px 0;
 }
 
 .contact-text {
+  color: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -178,7 +184,8 @@ h3 {
 }
 
 textarea {
-  border: none;
+  width: 80%;
+  border: 1px solid hsl(41, 71%, 74%);
   resize: vertical;
 }
 
@@ -297,6 +304,7 @@ h5 {
   color: hsl(0, 0%, 100%);
   border: 1px solid hsl(41, 71%, 74%);
   padding: 10px;
+  cursor: pointer;
 }
 
 .btn-subscribe:hover {
