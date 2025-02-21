@@ -25,7 +25,7 @@ allProducts.forEach((product) => {
                 currency: "NGN",
               }).format(product.price)}</div>
 
-              
+              ${""/*product.extraInfoHTML()*/}
   
               <div class="product-spacer"></div>
   
@@ -48,8 +48,8 @@ allProducts.forEach((product) => {
   `;
 });
 
-console.log();
-productsHTML;
+console.log(productsHTML);
+// productsHTML;
 
 document.querySelector(".js-products-grid").innerHTML = productsHTML;
 function updateCartQuantity() {

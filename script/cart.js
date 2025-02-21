@@ -40,22 +40,22 @@ export function addToCart(productId) {
   if (matchingItem) {
     matchingItem.quantity += 1;
     console.log(matchingItem);
-    const addedElem = document.querySelector(`.js-added-to-cart-${productId}`);
-    addedElem.style.opacity = 1;
-    setTimeout(() => {
-      addedElem.style.opacity = 0;
-    }, 3000);
+    // const addedElem = document.querySelector(`.js-added-to-cart-${productId}`);
+    // addedElem.style.opacity = 1;
+    // setTimeout(() => {
+    //   addedElem.style.opacity = 0;
+    // }, 3000);
   } else {
     cart.push({
       productId: productId,
       quantity: 1,
       deliveryOptionId: "1",
     });
-    const addedElem = document.querySelector(`.js-added-to-cart-${productId}`);
-    addedElem.style.opacity = 1;
-    setTimeout(() => {
-      addedElem.style.opacity = 0;
-    }, 2000);
+    // const addedElem = document.querySelector(`.js-added-to-cart-${productId}`);
+    // addedElem.style.opacity = 1;
+    // setTimeout(() => {
+    //   addedElem.style.opacity = 0;
+    // }, 2000);
   }
 
   saveToStorage();

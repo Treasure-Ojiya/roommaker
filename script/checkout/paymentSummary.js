@@ -10,9 +10,9 @@ export function renderPaymentSummary() {
   cart.forEach((cartItem) => {
     const product = getProduct(cartItem.productId);
     if (!product) {
-        console.error(`Product not found for ID: ${cartItem.productId}`);
-        return;
-      }
+      console.error(`Product not found for ID: ${cartItem.productId}`);
+      return;
+    }
     productPrice += product.price * cartItem.quantity;
 
     const deliveryOption = getDeliveryOption(cartItem.deliveryOptionId);
@@ -32,9 +32,9 @@ export function renderPaymentSummary() {
       <div>Items:</div>
       <div class="payment-summary-money">
         ${new Intl.NumberFormat("en-NG", {
-            style: "currency",
-            currency: "NGN",
-          }).format(productPrice)}
+          style: "currency",
+          currency: "NGN",
+        }).format(productPrice)}
       </div>
     </div>
 
@@ -42,9 +42,9 @@ export function renderPaymentSummary() {
       <div>Shipping &amp; handling:</div>
       <div class="payment-summary-money">
         ${new Intl.NumberFormat("en-NG", {
-            style: "currency",
-            currency: "NGN",
-          }).format(shippingPrice)}
+          style: "currency",
+          currency: "NGN",
+        }).format(shippingPrice)}
       </div>
     </div>
 
@@ -52,9 +52,9 @@ export function renderPaymentSummary() {
       <div>Total before tax:</div>
       <div class="payment-summary-money">
         ${new Intl.NumberFormat("en-NG", {
-            style: "currency",
-            currency: "NGN",
-          }).format(totalBeforeTax)}
+          style: "currency",
+          currency: "NGN",
+        }).format(totalBeforeTax)}
       </div>
     </div>
 

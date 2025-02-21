@@ -257,7 +257,7 @@ nav ul li a {
 }
 
 .product:hover {
-  box-shadow: 0 1px 10px hsl(16, 27%, 70%);
+  box-shadow: 0 1px 10px hsl(16, 27%, 50%);
   transition: 0.5s ease;
 }
 
@@ -318,6 +318,16 @@ nav ul li a {
   margin-right: 5px;
 }
 
+.size-chart {
+  color: hsl(0, 0%, 37%);
+  text-decoration: none;
+  font-size: 10px;
+  cursor: pointer;
+}
+.size-chart:hover {
+  color: hsl(0, 0%, 0%);
+}
+
 .add-to-cart {
   width: 100%;
   padding: 6px;
@@ -326,11 +336,12 @@ nav ul li a {
   color: hsl(0, 0%, 100%);
   background-color: hsl(33, 47%, 30%);
   border: none;
+  cursor: pointer;
 }
 
 .add-to-cart:hover {
   transform: translate(0, 5px);
-  background-color: hsl(33, 47%, 30%, 0.9);
+  background-color: hsl(33, 65%, 35%);
 }
 
 /* FOOTER STYLES */

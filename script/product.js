@@ -10,6 +10,39 @@ export function getProduct(productId) {
   return matchingProduct;
 }
 
+class Product {
+  id;
+  img;
+  name;
+  price;
+
+  constructor(productDetails) {
+    this.id = productDetails.id;
+    this.img = productDetails.img;
+    this.name = productDetails.name;
+    this.price = productDetails.price;
+  }
+
+  extraInfoHTML() {
+    return "";
+  }
+}
+
+class Curtain extends Product {
+  sizeChart;
+
+  constructor(productDetails) {
+    super(productDetails);
+
+    // this.sizeChart = productDetails.sizeChart
+  }
+
+  extraInfoHTML() {
+    // super.extraInfoHTML();, "if i want this method to inherit the parent method(from products above)"
+    return `<a href="this.sizeChart" target"-blank" class="size-chart">Size Chart</a>`;
+  }
+}
+
 
 export const allProducts = [
   {
@@ -53,6 +86,9 @@ export const allProducts = [
     name: "Dreams Drapery",
     price: 826700,
     img: "../product-img/Dreams-Drapery-2.jpg",
+
+    type: "fabric",
+    // sizeChart:"..charts/size-chart.jpg"
   },
   {
     id: "PROD-761493",
@@ -95,6 +131,8 @@ export const allProducts = [
     name: "Turkish Royal Drapes",
     price: 3000000,
     img: "../product-img/ip-perde-modeli-drapes.jpg",
+    type: "fabric",
+    // sizeChart:"..charts/size-chart.jpg"
   },
   {
     id: "PROD-000004",
@@ -167,6 +205,8 @@ export const allProducts = [
     name: "Velvet Vista curtain",
     price: 2400200,
     img: "../product-img/Velvet-Vista-curtain.jpg",
+    type: "fabric",
+    // sizeChart:"..charts/size-chart.jpg"
   },
   {
     id: "PROD-000016",
@@ -180,6 +220,9 @@ export const allProducts = [
     price: 1100400,
     img: "../product-img/Wooden-TV-Unit.jpg",
   },
-];
-
-// console.log(allProducts);
+].map((productDetails) => {
+  if (productDetails.type === "fabric") {
+    return new Curtain(productDetails);
+  }
+  return new Product(productDetails);
+});
