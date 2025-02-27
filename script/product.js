@@ -43,7 +43,6 @@ class Curtain extends Product {
   }
 }
 
-
 export const allProducts = [
   {
     id: "PROD-547281",

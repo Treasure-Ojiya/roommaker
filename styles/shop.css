@@ -68,7 +68,6 @@ body {
 }
 
 .nav-link:hover {
-  font-size: 1.5rem;
   text-decoration: underline;
 }
 .nav-link::after {
@@ -203,7 +202,7 @@ body {
   padding: 0.7rem;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
-  font-size: 18px;
+  font-size: 16px;
   color: hsl(0, 0%, 100%);
   background-color: hsl(20, 62%, 52%);
   cursor: pointer;

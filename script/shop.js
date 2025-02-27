@@ -25,7 +25,7 @@ allProducts.forEach((product) => {
                 currency: "NGN",
               }).format(product.price)}</div>
 
-              ${""/*product.extraInfoHTML()*/}
+              ${"" /*product.extraInfoHTML()*/}
   
               <div class="product-spacer"></div>
   
